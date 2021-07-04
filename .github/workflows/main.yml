@@ -8,4 +8,4 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           branch: main # The branch the action should deploy to.
-          folder: geo-movc # The folder the action should deploy.
+          folder: /geo-movc # The folder the action should deploy.
