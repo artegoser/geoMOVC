@@ -6668,55 +6668,55 @@ L.drawLocal = {
 	draw: {
 		toolbar: {
 			actions: {
-				title: 'Cancel drawing',
-				text: 'Cancel'
+				title: 'Закончить рисовать',
+				text: 'Закончить'
 			},
 			undo: {
-				title: 'Delete last point drawn',
-				text: 'Delete last point'
+				title: 'Удалить последнюю поставленную точку',
+				text: 'Удалить последнюю точку'
 			},
 			buttons: {
-				polyline: 'Draw a polyline',
-				polygon: 'Draw a polygon',
-				rectangle: 'Draw a rectangle',
-				circle: 'Draw a circle',
-				marker: 'Draw a marker'
+				polyline: 'Нарисовать полилинию',
+				polygon: 'Нарисовать территорию',
+				rectangle: 'Нарисовать прямоугольник',
+				circle: 'Нарисовать круг',
+				marker: 'Поставить маркер города'
 			}
 		},
 		handlers: {
 			circle: {
 				tooltip: {
-					start: 'Click and drag to draw circle.'
+					start: 'Нажать и тянуть для того чтобы нарисовать круг'
 				}
 			},
 			marker: {
 				tooltip: {
-					start: 'Click map to place marker.'
+					start: 'Нажать чтобы поставить маркер города.'
 				}
 			},
 			polygon: {
 				tooltip: {
-					start: 'Click to start drawing shape.',
-					cont: 'Click to continue drawing shape.',
-					end: 'Click first point to close this shape.'
+					start: 'Нажать чтобы начать рисовать территорию',
+					cont: 'Нажать чтобы продолжить рисовать территорию',
+					end: 'Нажать на последнюю точку или нажать два раза чтобы закончить рисовать территорию.'
 				}
 			},
 			polyline: {
 				error: '<strong>Error:</strong> shape edges cannot cross!',
 				tooltip: {
-					start: 'Click to start drawing line.',
-					cont: 'Click to continue drawing line.',
-					end: 'Click last point to finish line.'
+					start: 'Нажать чтобы рисовать.',
+					cont: 'Нажать для продолжения рисования.',
+					end: 'Нажать на последнюю точку или нажать два раза чтобы закончить рисовать.'
 				}
 			},
 			rectangle: {
 				tooltip: {
-					start: 'Click and drag to draw rectangle.'
+					start: 'Нажать и тянуть чтобы нарисовать прямоугольник'
 				}
 			},
 			simpleshape: {
 				tooltip: {
-					end: 'Release mouse to finish drawing.'
+					end: 'Отпустить мышь чтобы закончить рисовать'
 				}
 			}
 		}
@@ -6725,31 +6725,31 @@ L.drawLocal = {
 		toolbar: {
 			actions: {
 				save: {
-					title: 'Save changes.',
-					text: 'Save'
+					title: 'Сохранить изменения',
+					text: 'Сохранить'
 				},
 				cancel: {
-					title: 'Cancel editing, discards all changes.',
-					text: 'Cancel'
+					title: 'Закончить менять форму, отменить все изменения',
+					text: 'Закончить'
 				}
 			},
 			buttons: {
-				edit: 'Edit layers.',
-				editDisabled: 'No layers to edit.',
-				remove: 'Delete layers.',
-				removeDisabled: 'No layers to delete.'
+				edit: 'Изменить слои',
+				editDisabled: 'Нет слоев чтобы их менять',
+				remove: 'Удалить слой',
+				removeDisabled: 'Нет слоев чтобы их удалить'
 			}
 		},
 		handlers: {
 			edit: {
 				tooltip: {
-					text: 'Drag handles, or marker to edit feature.',
-					subtext: 'Click cancel to undo changes.'
+					text: 'Тяните маркеры чтобы изменить территорию/маркер.',
+					subtext: 'Нажмите Закончить чтобы отменить изменения'
 				}
 			},
 			remove: {
 				tooltip: {
-					text: 'Click on a feature to remove'
+					text: 'Нажмите на территорию/маркер чтобы удалить.'
 				}
 			}
 		}

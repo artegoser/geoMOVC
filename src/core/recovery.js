@@ -10,7 +10,7 @@ module.exports = function(context) {
 
     if (location.hash !== '#new' && !query.id && !query.data) {
         var rec = context.storage.get('recover');
-        if (rec && confirm('recover your map from the last time you edited?')) {
+        if (rec && confirm('Восстановить карту которую вы изменяли в последний раз?')) {
             context.data.set(rec);
             setTimeout(function() {
                 zoomextent(context);
