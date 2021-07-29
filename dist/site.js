@@ -30645,7 +30645,7 @@ module.exports = function fileBar(context) {
 
     function downloadGeoJSON() {
         if (d3.event) d3.event.preventDefault();
-        var content = JSON.stringify(context.data.get('map'));
+        var content = JSON.stringify(context.data.get('map'), null, "  ");
         var meta = context.data.get('meta');
         saveAs(new Blob([content], {
             type: 'text/plain;charset=utf-8'
