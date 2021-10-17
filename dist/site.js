@@ -31412,7 +31412,6 @@ async function movcset(){
   geo = (await geo.json()).features;
 
   for(let i of geo){
-    console.log("a");
     if(i.geometry.type==="Polygon") window.api.map.addLayer(L.geoJson(i, {color:i.properties.fill}))
   }
 }
