@@ -31412,11 +31412,34 @@ async function movcset(){
   geo = (await geo.json()).features;
 
   for(let i of geo){
-    if(i.geometry.type==="Polygon") window.api.map.addLayer(L.geoJson(i, {
+    window.api.map.addLayer(L.geoJson(i, {
       fillColor: i.properties.fill,
       color: i.properties.fill,
       weight: 1, 
+      pointToLayer: cpoint
     }));
+    function cpoint(feature, latlng){
+      if(feature.properties.type==="city"||!feature.properties.type){
+        let myIcon = L.icon({
+                iconSize:     [12, 12],
+                iconUrl: 'https://artegoser.github.io/movc/icons/city.png',
+        });
+        return L.marker(latlng, { icon: myIcon })
+      } else if(feature.properties.type==="capital-city"){
+              let myIcon = L.icon({
+                      iconSize:     [16, 16],
+                      iconUrl: 'https://artegoser.github.io/movc/icons/capital.png',
+              });
+              return L.marker(latlng, { icon: myIcon })
+      } else if(feature.properties.type==="landmark"){
+              let myIcon = L.icon({
+                      iconSize:     [16, 16],
+                      iconUrl: 'https://artegoser.github.io/movc/icons/landmark.png',
+              });
+              return L.marker(latlng, { icon: myIcon })
+      }
+      return L.marker(latlng)
+    }
   }
 }
 
