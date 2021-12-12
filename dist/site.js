@@ -31408,7 +31408,7 @@ topojson.scale = require("./lib/topojson/scale");
 },{"./lib/topojson/bind":111,"./lib/topojson/clockwise":114,"./lib/topojson/filter":118,"./lib/topojson/prune":122,"./lib/topojson/scale":124,"./lib/topojson/simplify":125,"./lib/topojson/stitch":127,"./lib/topojson/topology":128,"./topojson":140}]},{},[171]);
 
 async function movcset(){
-  let geo = await fetch("https://artegoser.github.io/movc/geo/geo.geojson");
+  let geo = await fetch("https://github.com/artegoser/MOVC-static/raw/main/geo/geo.geojson");
   geo = (await geo.json()).features;
 
   for(let i of geo){
