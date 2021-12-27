@@ -31438,7 +31438,7 @@ async function movcset(){
               });
               return L.marker(latlng, { icon: myIcon })
       }
-      return L.marker(latlng)
+      return L.marker(latlng);
     }
   }
 }
