@@ -28833,6 +28833,7 @@ module.exports = function(context) {
     function loadUrl(data) {
         d3.json(data)
             .header('Accept', 'application/vnd.geo+json')
+            .header('User-Agent', 'GeoMovc/1.0')
             .on('load', onload)
             .on('error', onerror)
             .get();
