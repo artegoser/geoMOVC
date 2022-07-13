@@ -35579,9 +35579,7 @@ exports.inflateUndermine = inflateUndermine;
 );
 
 async function movcset() {
-  let geo = await fetch(
-    "https://raw.githubusercontent.com/artegoser/MOVC-static/main/geo/geo.geojson"
-  );
+  let geo = await fetch("https://static.movc.xyz/movc/geo/geo.geojson");
   geo = (await geo.json()).features;
 
   for (let i of geo) {
@@ -35597,19 +35595,19 @@ async function movcset() {
       if (feature.properties.type === "city" || !feature.properties.type) {
         let myIcon = L.icon({
           iconSize: [12, 12],
-          iconUrl: "https://artegoser.github.io/movc/icons/city.png",
+          iconUrl: "https://static.movc.xyz/movc/icons/city.png",
         });
         return L.marker(latlng, { icon: myIcon });
       } else if (feature.properties.type === "capital-city") {
         let myIcon = L.icon({
           iconSize: [16, 16],
-          iconUrl: "https://artegoser.github.io/movc/icons/capital.png",
+          iconUrl: "https://static.movc.xyz/movc/icons/capital.png",
         });
         return L.marker(latlng, { icon: myIcon });
       } else if (feature.properties.type === "landmark") {
         let myIcon = L.icon({
           iconSize: [16, 16],
-          iconUrl: "https://artegoser.github.io/movc/icons/landmark.png",
+          iconUrl: "https://static.movc.xyz/movc/icons/landmark.png",
         });
         return L.marker(latlng, { icon: myIcon });
       }
